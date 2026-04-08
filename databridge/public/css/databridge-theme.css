@@ -1,0 +1,35 @@
+/* Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+   Developer Website: https://arkan.it.com
+   License: MIT
+   For license information, please see license.txt */
+
+/* DataBridge — Theme CSS
+ * Brand: Sky Blue #0EA5E9
+ * Domain: Data Migration & Integration
+ */
+
+:root {
+  --databridge-primary: #0EA5E9;
+  --databridge-primary-dark: #0284C7;
+  --databridge-primary-light: #0EA5E933;
+  --databridge-primary-subtle: #0EA5E90D;
+
+  --databridge-bg: #FFFFFF;
+  --databridge-bg-subtle: #F8FAFC;
+  --databridge-text: #1E293B;
+  --databridge-text-muted: #64748B;
+  --databridge-border: #E2E8F0;
+
+  --databridge-success: #10B981;
+  --databridge-warning: #F59E0B;
+  --databridge-danger: #EF4444;
+  --databridge-info: #3B82F6;
+}
+
+body[data-theme="dark"] {
+  --databridge-bg: #1E293B;
+  --databridge-bg-subtle: #0F172A;
+  --databridge-text: #F1F5F9;
+  --databridge-text-muted: #94A3B8;
+  --databridge-border: #334155;
+}

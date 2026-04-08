@@ -1,0 +1,158 @@
+{
+  "name": "DB Import Job",
+  "module": "Import Export",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "DB-IMP-.#####",
+  "fields": [
+    {
+      "fieldname": "job_name",
+      "fieldtype": "Data",
+      "label": "Job Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "target_doctype",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "label": "Target DocType",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "source_file",
+      "fieldtype": "Attach",
+      "label": "Source File"
+    },
+    {
+      "fieldname": "file_format",
+      "fieldtype": "Select",
+      "options": "CSV\nExcel\nJSON",
+      "label": "File Format",
+      "default": "CSV"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Draft\nValidating\nReady\nRunning\nCompleted\nFailed\nRolled Back",
+      "label": "Status",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cb1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "total_rows",
+      "fieldtype": "Int",
+      "label": "Total Rows",
+      "read_only": 1
+    },
+    {
+      "fieldname": "imported_count",
+      "fieldtype": "Int",
+      "label": "Imported",
+      "read_only": 1
+    },
+    {
+      "fieldname": "failed_count",
+      "fieldtype": "Int",
+      "label": "Failed",
+      "read_only": 1
+    },
+    {
+      "fieldname": "skipped_count",
+      "fieldtype": "Int",
+      "label": "Skipped",
+      "read_only": 1
+    },
+    {
+      "fieldname": "sb_mapping",
+      "fieldtype": "Section Break",
+      "label": "Field Mapping"
+    },
+    {
+      "fieldname": "field_map",
+      "fieldtype": "Link",
+      "options": "DB Field Map",
+      "label": "Field Map"
+    },
+    {
+      "fieldname": "field_mapping",
+      "fieldtype": "Table",
+      "options": "DB Import Field Mapping",
+      "label": "Field Mapping"
+    },
+    {
+      "fieldname": "sb_options",
+      "fieldtype": "Section Break",
+      "label": "Options"
+    },
+    {
+      "fieldname": "update_existing",
+      "fieldtype": "Check",
+      "label": "Update Existing Records"
+    },
+    {
+      "fieldname": "skip_errors",
+      "fieldtype": "Check",
+      "label": "Skip Errors",
+      "default": "1"
+    },
+    {
+      "fieldname": "create_rollback_point",
+      "fieldtype": "Check",
+      "label": "Create Rollback Point",
+      "default": "1"
+    },
+    {
+      "fieldname": "sb_timing",
+      "fieldtype": "Section Break",
+      "label": "Timing"
+    },
+    {
+      "fieldname": "started_at",
+      "fieldtype": "Datetime",
+      "label": "Started At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "completed_at",
+      "fieldtype": "Datetime",
+      "label": "Completed At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "rollback_point",
+      "fieldtype": "Link",
+      "options": "DB Rollback Point",
+      "label": "Rollback Point",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

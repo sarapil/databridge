@@ -1,0 +1,76 @@
+{
+  "name": "DB Data Audit Log",
+  "module": "Data Integrity",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "DB-AUDIT-.#####",
+  "fields": [
+    {
+      "fieldname": "action",
+      "fieldtype": "Select",
+      "options": "Import\nExport\nSync\nMigration\nRollback",
+      "label": "Action",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "target_doctype",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "label": "Target DocType",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "record_count",
+      "fieldtype": "Int",
+      "label": "Record Count"
+    },
+    {
+      "fieldname": "user",
+      "fieldtype": "Link",
+      "options": "User",
+      "label": "User"
+    },
+    {
+      "fieldname": "reference_type",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "label": "Ref Type"
+    },
+    {
+      "fieldname": "reference_name",
+      "fieldtype": "Dynamic Link",
+      "options": "reference_type",
+      "label": "Ref Name"
+    },
+    {
+      "fieldname": "details",
+      "fieldtype": "Small Text",
+      "label": "Details"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

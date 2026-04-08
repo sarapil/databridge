@@ -1,0 +1,87 @@
+{
+  "name": "DB Export Job",
+  "module": "Import Export",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "DB-EXP-.#####",
+  "fields": [
+    {
+      "fieldname": "job_name",
+      "fieldtype": "Data",
+      "label": "Job Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "source_doctype",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "label": "Source DocType",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "file_format",
+      "fieldtype": "Select",
+      "options": "CSV\nExcel\nJSON",
+      "label": "Format",
+      "default": "CSV",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Draft\nRunning\nCompleted\nFailed",
+      "label": "Status",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "filters_json",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "label": "Filters (JSON)"
+    },
+    {
+      "fieldname": "fields_json",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "label": "Fields (JSON)"
+    },
+    {
+      "fieldname": "exported_file",
+      "fieldtype": "Attach",
+      "label": "Exported File",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_rows",
+      "fieldtype": "Int",
+      "label": "Total Rows",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

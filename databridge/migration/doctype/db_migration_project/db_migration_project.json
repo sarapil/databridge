@@ -1,0 +1,116 @@
+{
+  "name": "DB Migration Project",
+  "module": "Migration",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "DB-MIG-.#####",
+  "fields": [
+    {
+      "fieldname": "project_name",
+      "fieldtype": "Data",
+      "label": "Project Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "source_system",
+      "fieldtype": "Select",
+      "options": "Odoo\nQuickBooks\nSage\nTally\nSalesforce\nZoho\nCustom",
+      "label": "Source System",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Planning\nMapping\nTesting\nRunning\nCompleted\nFailed\nRolled Back",
+      "label": "Status",
+      "default": "Planning",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "source_connection",
+      "fieldtype": "Link",
+      "options": "DB Source Connection",
+      "label": "Source Connection"
+    },
+    {
+      "fieldname": "cb1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "started_at",
+      "fieldtype": "Datetime",
+      "label": "Started At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "completed_at",
+      "fieldtype": "Datetime",
+      "label": "Completed At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "sb_steps",
+      "fieldtype": "Section Break",
+      "label": "Migration Steps"
+    },
+    {
+      "fieldname": "steps",
+      "fieldtype": "Table",
+      "options": "DB Migration Step",
+      "label": "Steps"
+    },
+    {
+      "fieldname": "sb_stats",
+      "fieldtype": "Section Break",
+      "label": "Statistics"
+    },
+    {
+      "fieldname": "total_records",
+      "fieldtype": "Int",
+      "label": "Total Records",
+      "read_only": 1
+    },
+    {
+      "fieldname": "migrated_count",
+      "fieldtype": "Int",
+      "label": "Migrated",
+      "read_only": 1
+    },
+    {
+      "fieldname": "failed_count",
+      "fieldtype": "Int",
+      "label": "Failed",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "name": "DB Rollback Point",
+  "module": "Data Integrity",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "DB-RB-.#####",
+  "fields": [
+    {
+      "fieldname": "rollback_name",
+      "fieldtype": "Data",
+      "label": "Rollback Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "import_job",
+      "fieldtype": "Link",
+      "options": "DB Import Job",
+      "label": "Import Job"
+    },
+    {
+      "fieldname": "migration_project",
+      "fieldtype": "Link",
+      "options": "DB Migration Project",
+      "label": "Migration Project"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Active\nRolled Back\nExpired",
+      "label": "Status",
+      "default": "Active",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "record_count",
+      "fieldtype": "Int",
+      "label": "Record Count",
+      "read_only": 1
+    },
+    {
+      "fieldname": "records_json",
+      "fieldtype": "Long Text",
+      "label": "Records (JSON)",
+      "hidden": 1
+    },
+    {
+      "fieldname": "created_at",
+      "fieldtype": "Datetime",
+      "label": "Created At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "rolled_back_at",
+      "fieldtype": "Datetime",
+      "label": "Rolled Back At",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

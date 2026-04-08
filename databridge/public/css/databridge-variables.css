@@ -1,0 +1,29 @@
+/* Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+   Developer Website: https://arkan.it.com
+   License: MIT
+   For license information, please see license.txt */
+
+/* DataBridge — CSS Variables
+ * Brand: Sky Blue #0EA5E9
+ */
+
+:root {
+  --db-sky: #0EA5E9;
+  --db-sky-light: #7DD3FC;
+  --db-sky-lighter: #BAE6FD;
+  --db-sky-dark: #0284C7;
+  --db-sky-gradient: linear-gradient(135deg, #0EA5E9 0%, #7DD3FC 100%);
+
+  --db-accent: #0EA5E9;
+  --db-accent-bg: rgba(14, 165, 233, 0.08);
+  --db-accent-hover: rgba(14, 165, 233, 0.15);
+
+  --db-synced: #10B981;
+  --db-failed: #EF4444;
+  --db-pending: #F59E0B;
+  --db-running: #3B82F6;
+
+  --db-sidebar-width: 250px;
+  --db-border-radius: 8px;
+  --db-transition: all 0.2s ease;
+}

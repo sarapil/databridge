@@ -1,0 +1,135 @@
+{
+  "name": "DB Source Connection",
+  "module": "Migration",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "By fieldname",
+  "autoname": "field:connection_name",
+  "fields": [
+    {
+      "fieldname": "connection_name",
+      "fieldtype": "Data",
+      "label": "Connection Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "source_type",
+      "fieldtype": "Select",
+      "options": "Database\nREST API\nFile\nFTP/SFTP",
+      "label": "Source Type",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "sb_db",
+      "fieldtype": "Section Break",
+      "label": "Database Connection",
+      "depends_on": "eval:doc.source_type=='Database'"
+    },
+    {
+      "fieldname": "db_type",
+      "fieldtype": "Select",
+      "options": "\nMySQL\nPostgreSQL\nMSSQL\nSQLite\nOracle",
+      "label": "DB Type"
+    },
+    {
+      "fieldname": "db_host",
+      "fieldtype": "Data",
+      "label": "DB Host"
+    },
+    {
+      "fieldname": "db_port",
+      "fieldtype": "Int",
+      "label": "DB Port"
+    },
+    {
+      "fieldname": "db_name",
+      "fieldtype": "Data",
+      "label": "Database Name"
+    },
+    {
+      "fieldname": "db_user",
+      "fieldtype": "Data",
+      "label": "DB User"
+    },
+    {
+      "fieldname": "db_password",
+      "fieldtype": "Password",
+      "label": "DB Password"
+    },
+    {
+      "fieldname": "sb_api",
+      "fieldtype": "Section Break",
+      "label": "API Connection",
+      "depends_on": "eval:doc.source_type=='REST API'"
+    },
+    {
+      "fieldname": "api_base_url",
+      "fieldtype": "Data",
+      "label": "API Base URL"
+    },
+    {
+      "fieldname": "api_key",
+      "fieldtype": "Password",
+      "label": "API Key"
+    },
+    {
+      "fieldname": "api_secret",
+      "fieldtype": "Password",
+      "label": "API Secret"
+    },
+    {
+      "fieldname": "auth_type",
+      "fieldtype": "Select",
+      "options": "\nBearer\nBasic\nOAuth2\nAPI Key Header",
+      "label": "Auth Type"
+    },
+    {
+      "fieldname": "sb_health",
+      "fieldtype": "Section Break",
+      "label": "Health"
+    },
+    {
+      "fieldname": "last_tested",
+      "fieldtype": "Datetime",
+      "label": "Last Tested",
+      "read_only": 1
+    },
+    {
+      "fieldname": "connection_status",
+      "fieldtype": "Select",
+      "options": "Unknown\nConnected\nFailed",
+      "label": "Status",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

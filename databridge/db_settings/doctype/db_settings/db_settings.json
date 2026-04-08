@@ -1,0 +1,103 @@
+{
+  "name": "DB Settings",
+  "module": "DB Settings",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 1,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "autoincrement",
+  "autoname": "",
+  "fields": [
+    {
+      "fieldname": "default_import_format",
+      "fieldtype": "Select",
+      "options": "CSV\nExcel\nJSON",
+      "label": "Default Import Format",
+      "default": "CSV"
+    },
+    {
+      "fieldname": "max_import_rows",
+      "fieldtype": "Int",
+      "label": "Max Import Rows",
+      "default": "50000"
+    },
+    {
+      "fieldname": "batch_size",
+      "fieldtype": "Int",
+      "label": "Batch Size",
+      "default": "500"
+    },
+    {
+      "fieldname": "sb_sync",
+      "fieldtype": "Section Break",
+      "label": "Sync Settings"
+    },
+    {
+      "fieldname": "sync_interval_minutes",
+      "fieldtype": "Int",
+      "label": "Sync Interval (min)",
+      "default": "5"
+    },
+    {
+      "fieldname": "enable_sync_logging",
+      "fieldtype": "Check",
+      "label": "Enable Sync Logging",
+      "default": "1"
+    },
+    {
+      "fieldname": "sb_retention",
+      "fieldtype": "Section Break",
+      "label": "Data Retention"
+    },
+    {
+      "fieldname": "log_retention_days",
+      "fieldtype": "Int",
+      "label": "Log Retention Days",
+      "default": "90"
+    },
+    {
+      "fieldname": "keep_import_files",
+      "fieldtype": "Check",
+      "label": "Keep Import Files",
+      "default": "1"
+    },
+    {
+      "fieldname": "sb_validation",
+      "fieldtype": "Section Break",
+      "label": "Validation"
+    },
+    {
+      "fieldname": "strict_validation",
+      "fieldtype": "Check",
+      "label": "Strict Validation",
+      "default": "0"
+    },
+    {
+      "fieldname": "auto_map_fields",
+      "fieldtype": "Check",
+      "label": "Auto-Map Fields",
+      "default": "1"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "app": "databridge",
+  "label": "DataBridge",
+  "icon": "database",
+  "color": "#0EA5E9",
+  "languages": [
+    "en",
+    "ar"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "name": "DB API Connection",
+  "module": "Api Hub",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "By fieldname",
+  "autoname": "field:connection_name",
+  "fields": [
+    {
+      "fieldname": "connection_name",
+      "fieldtype": "Data",
+      "label": "Connection Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "base_url",
+      "fieldtype": "Data",
+      "label": "Base URL",
+      "reqd": 1
+    },
+    {
+      "fieldname": "auth_type",
+      "fieldtype": "Select",
+      "options": "None\nBearer Token\nBasic Auth\nOAuth2\nAPI Key",
+      "label": "Auth Type"
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "sb_auth",
+      "fieldtype": "Section Break",
+      "label": "Authentication"
+    },
+    {
+      "fieldname": "api_key",
+      "fieldtype": "Password",
+      "label": "API Key / Token"
+    },
+    {
+      "fieldname": "api_secret",
+      "fieldtype": "Password",
+      "label": "API Secret"
+    },
+    {
+      "fieldname": "username",
+      "fieldtype": "Data",
+      "label": "Username"
+    },
+    {
+      "fieldname": "password",
+      "fieldtype": "Password",
+      "label": "Password"
+    },
+    {
+      "fieldname": "sb_settings",
+      "fieldtype": "Section Break",
+      "label": "Settings"
+    },
+    {
+      "fieldname": "timeout_seconds",
+      "fieldtype": "Int",
+      "label": "Timeout (sec)",
+      "default": "30"
+    },
+    {
+      "fieldname": "rate_limit",
+      "fieldtype": "Int",
+      "label": "Rate Limit/min"
+    },
+    {
+      "fieldname": "last_tested",
+      "fieldtype": "Datetime",
+      "label": "Last Tested",
+      "read_only": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Unknown\nConnected\nFailed",
+      "label": "Status",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

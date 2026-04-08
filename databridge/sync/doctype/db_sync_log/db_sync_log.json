@@ -1,0 +1,79 @@
+{
+  "name": "DB Sync Log",
+  "module": "Sync",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "DB-SYNCLOG-.#####",
+  "fields": [
+    {
+      "fieldname": "sync_config",
+      "fieldtype": "Link",
+      "options": "DB Sync Configuration",
+      "label": "Sync Configuration",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "direction",
+      "fieldtype": "Select",
+      "options": "Push\nPull",
+      "label": "Direction",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Success\nPartial\nFailed",
+      "label": "Status",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "records_synced",
+      "fieldtype": "Int",
+      "label": "Records Synced"
+    },
+    {
+      "fieldname": "records_failed",
+      "fieldtype": "Int",
+      "label": "Records Failed"
+    },
+    {
+      "fieldname": "started_at",
+      "fieldtype": "Datetime",
+      "label": "Started At"
+    },
+    {
+      "fieldname": "completed_at",
+      "fieldtype": "Datetime",
+      "label": "Completed At"
+    },
+    {
+      "fieldname": "error_log",
+      "fieldtype": "Long Text",
+      "label": "Error Log"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

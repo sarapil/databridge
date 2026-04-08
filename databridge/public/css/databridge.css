@@ -1,0 +1,37 @@
+/* DataBridge Theme Variables */
+:root {
+    --databridge-primary: #0EA5E9;
+    --databridge-primary-light: #7DD3FC;
+    --databridge-primary-dark: #0369A1;
+    --databridge-bg: #F0F9FF;
+    --databridge-border: #BAE6FD;
+}
+
+.databridge-card {
+    border-inline-start: 3px solid var(--databridge-primary);
+    border-radius: var(--border-radius-md);
+    padding: 1rem;
+    margin-block-end: 0.75rem;
+    background: var(--card-bg);
+    transition: box-shadow 0.2s ease;
+}
+
+.databridge-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.databridge-progress {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--databridge-border);
+    overflow: hidden;
+}
+.databridge-progress-bar {
+    height: 100%;
+    background: var(--databridge-primary);
+    transition: width 0.3s ease;
+}
+
+.databridge-status.success { color: var(--green-600); }
+.databridge-status.running { color: var(--databridge-primary); }
+.databridge-status.failed { color: var(--red-600); }

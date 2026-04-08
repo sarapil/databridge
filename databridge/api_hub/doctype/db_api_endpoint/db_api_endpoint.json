@@ -1,0 +1,91 @@
+{
+  "name": "DB API Endpoint",
+  "module": "Api Hub",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "By fieldname",
+  "autoname": "field:endpoint_name",
+  "fields": [
+    {
+      "fieldname": "endpoint_name",
+      "fieldtype": "Data",
+      "label": "Endpoint Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "connection",
+      "fieldtype": "Link",
+      "options": "DB API Connection",
+      "label": "Connection",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "method",
+      "fieldtype": "Select",
+      "options": "GET\nPOST\nPUT\nPATCH\nDELETE",
+      "label": "Method",
+      "default": "GET",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "path",
+      "fieldtype": "Data",
+      "label": "Path",
+      "reqd": 1
+    },
+    {
+      "fieldname": "target_doctype",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "label": "Target DocType"
+    },
+    {
+      "fieldname": "field_map",
+      "fieldtype": "Link",
+      "options": "DB Field Map",
+      "label": "Field Map"
+    },
+    {
+      "fieldname": "headers_json",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "label": "Headers"
+    },
+    {
+      "fieldname": "body_template",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "label": "Body Template"
+    },
+    {
+      "fieldname": "response_path",
+      "fieldtype": "Data",
+      "label": "Response Data Path",
+      "description": "Dot notation to data array"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

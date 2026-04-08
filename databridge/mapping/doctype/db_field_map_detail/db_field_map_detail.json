@@ -1,0 +1,70 @@
+{
+  "name": "DB Field Map Detail",
+  "module": "Mapping",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "autoincrement",
+  "autoname": "",
+  "fields": [
+    {
+      "fieldname": "source_field",
+      "fieldtype": "Data",
+      "label": "Source Field",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "target_field",
+      "fieldtype": "Data",
+      "label": "Target Field",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "field_type",
+      "fieldtype": "Select",
+      "options": "\nData\nInt\nFloat\nDate\nDatetime\nCheck\nLink\nSelect",
+      "label": "Type",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "transform",
+      "fieldtype": "Select",
+      "options": "\nNone\nUppercase\nLowercase\nDate Format\nCustom",
+      "label": "Transform"
+    },
+    {
+      "fieldname": "custom_formula",
+      "fieldtype": "Code",
+      "label": "Custom Formula"
+    },
+    {
+      "fieldname": "required",
+      "fieldtype": "Check",
+      "label": "Required"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "DB Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}
