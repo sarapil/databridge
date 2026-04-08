@@ -7,7 +7,7 @@
 
     const APP_CONFIG = {
         name: "databridge",
-        title: __("DataBridge"),
+        title: "DataBridge",
         color: "#0EA5E9",
         module: "DataBridge",
     };

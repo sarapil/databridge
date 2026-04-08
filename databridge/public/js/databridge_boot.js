@@ -3,6 +3,10 @@
 // License: MIT
 
 // DataBridge — Global Bootstrap
+(function() {
+"use strict";
+// Guard: skip if frappe core not loaded (transient HTTP/2 proxy failures)
+if (typeof frappe === "undefined" || typeof frappe.provide !== "function") return;
 frappe.provide("databridge");
 
 databridge.COLORS = {
@@ -31,3 +35,4 @@ frappe.realtime.on("db_sync_status", (data) => {
         });
     }
 });
+})();
