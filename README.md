@@ -56,8 +56,8 @@ bench --site your-site migrate
 
 ## Reports
 
-| Report | Module | Description |
-|--------|--------|-------------|
+| Report         | Module         | Description                      |
+| -------------- | -------------- | -------------------------------- |
 | Import History | Data Integrity | Import job status with pie chart |
 
 ## Contributing
