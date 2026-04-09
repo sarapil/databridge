@@ -1,0 +1,143 @@
+{
+  "app": "databridge",
+  "charts": [],
+  "content": "[{\"id\": \"sc_1\", \"type\": \"shortcut\", \"data\": {\"col\": 12}}, {\"id\": \"c_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Import & Export\", \"col\": 4}}, {\"id\": \"c_2\", \"type\": \"card\", \"data\": {\"card_name\": \"Connections\", \"col\": 4}}, {\"id\": \"c_3\", \"type\": \"card\", \"data\": {\"card_name\": \"Quick Setup\", \"col\": 4}}]",
+  "creation": "2026-04-08 17:49:10.597531",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "database",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "DataBridge",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Import & Export",
+      "link_count": 3,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Import Jobs",
+      "link_to": "DB Import Job",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Export Jobs",
+      "link_to": "DB Export Job",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Import Errors",
+      "link_to": "DB Import Error",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Card Break",
+      "label": "Connections",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Source Connections",
+      "link_to": "DB Source Connection",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Field Maps",
+      "link_to": "DB Field Map",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Card Break",
+      "label": "Quick Setup",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Settings",
+      "link_to": "DB Settings",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-08 17:49:10.597531",
+  "modified_by": "Administrator",
+  "module": "DB Settings",
+  "name": "DataBridge",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 1,
+  "shortcuts": [
+    {
+      "label": "Import Jobs",
+      "link_to": "DB Import Job",
+      "type": "DocType",
+      "color": "Blue",
+      "doc_view": "List"
+    },
+    {
+      "label": "Connections",
+      "link_to": "DB Source Connection",
+      "type": "DocType",
+      "color": "Green",
+      "doc_view": "List"
+    },
+    {
+      "label": "Migrations",
+      "link_to": "DB Migration Project",
+      "type": "DocType",
+      "color": "Orange",
+      "doc_view": "List"
+    },
+    {
+      "label": "Sync Config",
+      "link_to": "DB Sync Configuration",
+      "type": "DocType",
+      "color": "Purple",
+      "doc_view": "List"
+    }
+  ],
+  "title": "DataBridge"
+}

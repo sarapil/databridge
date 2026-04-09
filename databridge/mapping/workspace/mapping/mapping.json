@@ -1,0 +1,58 @@
+{
+  "app": "databridge",
+  "charts": [],
+  "content": "[{\"id\": \"c_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Field Mapping\", \"col\": 4}}]",
+  "creation": "2026-04-08 17:49:10.597531",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "transform",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Mapping",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Field Mapping",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Field Maps",
+      "link_to": "DB Field Map",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Transform Rules",
+      "link_to": "DB Transform Rule",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-08 17:49:10.597531",
+  "modified_by": "Administrator",
+  "module": "Mapping",
+  "name": "DB Mapping",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "DataBridge",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 3,
+  "shortcuts": [],
+  "title": "Mapping"
+}
