@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DataBridge icon">
+  <defs>
+    <linearGradient id="dbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="url(#dbg)"/>
+  <path d="M30 42h68v12H30zM30 58h68v12H30zM30 74h40v12H30z" fill="#E0F2FE" opacity="0.9"/>
+  <circle cx="86" cy="80" r="12" fill="#BAE6FD"/>
+  <circle cx="86" cy="80" r="6" fill="#0369A1"/>
+</svg>
