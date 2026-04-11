@@ -1,4 +1,5 @@
 # DB Operator — Usage Scenarios
+
 # سيناريوهات استخدام — مشغل الاستيراد
 
 ## Role Overview
@@ -11,6 +12,7 @@
 ## Daily Scenarios (يومي)
 
 ### DS-001: Run CSV Import
+
 - **Goal**: Import data from a CSV file into ERPNext
 - **Steps**:
   1. Navigate to Import Export workspace → DB Import Job → New
@@ -20,6 +22,7 @@
   5. Review DB Import Error for any failed rows
 
 ### DS-002: Export Data
+
 - **Goal**: Export ERPNext data for external use
 - **Steps**:
   1. Navigate to Import Export → DB Export Job → New
@@ -30,6 +33,7 @@
 ## Weekly Scenarios (أسبوعي)
 
 ### WS-001: Review Import History
+
 - **Goal**: Check past import jobs for patterns
 - **Steps**:
   1. Run Import History report

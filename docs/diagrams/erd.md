@@ -1,4 +1,5 @@
 # DataBridge — Entity Relationship Diagram
+
 # مخطط علاقات الكيانات — DataBridge
 
 ```mermaid

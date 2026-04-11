@@ -4,8 +4,8 @@ Per-role usage scenarios that drive screen design, test cases, and onboarding co
 
 ## Roles
 
-| Role | File | Description |
-|------|------|-------------|
-| DB Admin | [admin.md](admin.md) | System administrator — full configuration |
-| DB Manager | [manager.md](manager.md) | Migration planning and oversight |
-| DB Operator | [operator.md](operator.md) | Day-to-day import/export operations |
+| Role        | File                       | Description                               |
+| ----------- | -------------------------- | ----------------------------------------- |
+| DB Admin    | [admin.md](admin.md)       | System administrator — full configuration |
+| DB Manager  | [manager.md](manager.md)   | Migration planning and oversight          |
+| DB Operator | [operator.md](operator.md) | Day-to-day import/export operations       |

@@ -1,4 +1,5 @@
 # DB Manager — Usage Scenarios
+
 # سيناريوهات استخدام — مدير الترحيل
 
 ## Role Overview
@@ -11,6 +12,7 @@
 ## Daily Scenarios (يومي)
 
 ### DS-001: Create Field Mapping
+
 - **Goal**: Map source fields to target ERPNext fields
 - **Steps**:
   1. Navigate to Mapping workspace → DB Field Map → New
@@ -19,6 +21,7 @@
   4. Save and test with sample data
 
 ### DS-002: Plan Data Migration
+
 - **Goal**: Create a sequenced migration plan
 - **Steps**:
   1. Navigate to Migration workspace → DB Migration Plan → New
@@ -29,6 +32,7 @@
 ## Weekly Scenarios (أسبوعي)
 
 ### WS-001: Monitor Sync Profiles
+
 - **Goal**: Ensure bidirectional syncs are running correctly
 - **Steps**:
   1. Navigate to Sync workspace

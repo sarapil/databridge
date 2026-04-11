@@ -1,4 +1,5 @@
 # DataBridge Dashboard — Screen Spec
+
 # لوحة تحكم DataBridge
 
 ## Overview
@@ -26,11 +27,11 @@ Primary workspace dashboard showing import/export activity, sync status, and dat
 
 ## Responsive Breakpoints
 
-| Breakpoint | Layout |
-|-----------|--------|
-| >= 1280px | 3-column grid |
-| 768-1279px | 2-column grid |
-| < 768px | Single column stack |
+| Breakpoint | Layout              |
+| ---------- | ------------------- |
+| >= 1280px  | 3-column grid       |
+| 768-1279px | 2-column grid       |
+| < 768px    | Single column stack |
 
 ## RTL Support
 
