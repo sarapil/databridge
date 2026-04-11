@@ -48,14 +48,8 @@ add_to_apps_screen = [
 ]
 
 # Includes in <head>
-app_include_css = [
-    "/assets/databridge/css/databridge-theme.css",
-    "/assets/databridge/css/databridge-variables.css",
-]
-app_include_js = [
-    "/assets/databridge/js/databridge_boot.js",
-    "/assets/databridge/js/fv_integration.js",
-]
+app_include_css = ["/assets/databridge/css/databridge_combined.css"]
+app_include_js = ["/assets/databridge/js/databridge_combined.js"]
 
 # Installation
 before_install = "databridge.install.before_install"
