@@ -13,7 +13,17 @@ def seed_data():
     """Idempotent seed — safe to run multiple times."""
     _seed_settings()
     _seed_validation_rules()
+    _seed_import_templates()
     frappe.db.commit()
+
+
+def _seed_import_templates():
+    """Seed pre-built import templates for Arkan Lab apps."""
+    try:
+        from databridge.services.import_templates import seed_import_templates
+        seed_import_templates()
+    except Exception:
+        frappe.log_error(title="DataBridge: failed to seed import templates")
 
 
 def _seed_settings():
