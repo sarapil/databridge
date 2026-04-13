@@ -1,0 +1,121 @@
+{% extends "templates/web.html" %}
+{% block title %}{{ _("About DataBridge") }} | {{ _("عن جسر البيانات") }}{% endblock %}
+
+{% block head_include %}
+<style>
+.db-about-hero {
+    background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 0 0 2rem 2rem;
+}
+.db-about-hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.db-about-hero p { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+.db-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.db-feature-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+.db-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.15);
+}
+.db-feature-icon { font-size: 2rem; margin-bottom: 1rem; }
+.db-feature-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+.db-feature-desc { color: var(--text-muted); }
+.db-sources { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; padding: 2rem; background: var(--subtle-bg); }
+.db-source { text-align: center; padding: 1rem; }
+.db-source-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.db-cta { text-align: center; padding: 3rem; }
+.db-cta-btn { display: inline-block; background: #0EA5E9; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+.db-cta-btn:hover { background: #0284C7; }
+[dir="rtl"] .db-features-grid, [dir="rtl"] .db-sources { direction: rtl; }
+</style>
+{% endblock %}
+
+{% block page_content %}
+<div class="db-about-page">
+    <!-- Hero Section -->
+    <section class="db-about-hero">
+        <h1>🔄 {{ _("DataBridge") }}</h1>
+        <p>{{ _("Data Migration & Integration Engine for Frappe/ERPNext") }}</p>
+        <p>{{ _("محرك ترحيل البيانات والتكامل لـ Frappe/ERPNext") }}</p>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="db-features-grid">
+        <div class="db-feature-card">
+            <div class="db-feature-icon">📥</div>
+            <h3 class="db-feature-title">{{ _("Multi-Source Import") }}</h3>
+            <p class="db-feature-desc">{{ _("Import data from Excel, CSV, JSON, XML, SQL databases, and REST APIs") }}</p>
+        </div>
+        <div class="db-feature-card">
+            <div class="db-feature-icon">🗺️</div>
+            <h3 class="db-feature-title">{{ _("Visual Field Mapping") }}</h3>
+            <p class="db-feature-desc">{{ _("Drag-and-drop field mapping with transformation rules") }}</p>
+        </div>
+        <div class="db-feature-card">
+            <div class="db-feature-icon">✅</div>
+            <h3 class="db-feature-title">{{ _("Validation Engine") }}</h3>
+            <p class="db-feature-desc">{{ _("Pre-import validation with detailed error reports") }}</p>
+        </div>
+        <div class="db-feature-card">
+            <div class="db-feature-icon">🔄</div>
+            <h3 class="db-feature-title">{{ _("Scheduled Sync") }}</h3>
+            <p class="db-feature-desc">{{ _("Automated synchronization on configurable schedules") }}</p>
+        </div>
+        <div class="db-feature-card">
+            <div class="db-feature-icon">📊</div>
+            <h3 class="db-feature-title">{{ _("Progress Tracking") }}</h3>
+            <p class="db-feature-desc">{{ _("Real-time progress with detailed logs and rollback capability") }}</p>
+        </div>
+        <div class="db-feature-card">
+            <div class="db-feature-icon">🔗</div>
+            <h3 class="db-feature-title">{{ _("API Connectors") }}</h3>
+            <p class="db-feature-desc">{{ _("Pre-built connectors for popular ERP and CRM systems") }}</p>
+        </div>
+    </section>
+
+    <!-- Supported Sources -->
+    <section class="db-sources">
+        <div class="db-source">
+            <div class="db-source-icon">📊</div>
+            <div>{{ _("Excel/CSV") }}</div>
+        </div>
+        <div class="db-source">
+            <div class="db-source-icon">🗄️</div>
+            <div>{{ _("SQL Databases") }}</div>
+        </div>
+        <div class="db-source">
+            <div class="db-source-icon">🌐</div>
+            <div>{{ _("REST APIs") }}</div>
+        </div>
+        <div class="db-source">
+            <div class="db-source-icon">📝</div>
+            <div>{{ _("JSON/XML") }}</div>
+        </div>
+        <div class="db-source">
+            <div class="db-source-icon">☁️</div>
+            <div>{{ _("Cloud Storage") }}</div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="db-cta">
+        <h2>{{ _("Ready to migrate your data?") }}</h2>
+        <p>{{ _("هل أنت مستعد لترحيل بياناتك؟") }}</p>
+        <a href="/desk/databridge" class="db-cta-btn">{{ _("Get Started") }} →</a>
+    </section>
+</div>
+{% endblock %}

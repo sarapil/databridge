@@ -1,0 +1,108 @@
+{% extends "templates/web.html" %}
+{% block title %}{{ _("DataBridge Onboarding") }} | {{ _("بدء استخدام جسر البيانات") }}{% endblock %}
+
+{% block head_include %}
+<style>
+.db-onboard-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+.db-onboard-header { text-align: center; margin-bottom: 3rem; }
+.db-onboard-header h1 { color: #0EA5E9; margin-bottom: 0.5rem; }
+.db-onboard-step {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border-left: 4px solid #0EA5E9;
+}
+.db-step-number {
+    width: 40px;
+    height: 40px;
+    background: #0EA5E9;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.db-step-content h3 { margin: 0 0 0.5rem 0; }
+.db-step-content p { margin: 0; color: var(--text-muted); }
+.db-step-link { color: #0EA5E9; text-decoration: none; font-weight: 500; }
+.db-step-link:hover { text-decoration: underline; }
+.db-tips { background: rgba(14, 165, 233, 0.1); border-radius: 12px; padding: 1.5rem; margin-top: 2rem; }
+.db-tips h3 { color: #0EA5E9; margin-bottom: 1rem; }
+.db-tips ul { margin: 0; padding-inline-start: 1.5rem; }
+.db-tips li { margin-bottom: 0.5rem; }
+[dir="rtl"] .db-onboard-step { border-left: none; border-right: 4px solid #0EA5E9; }
+</style>
+{% endblock %}
+
+{% block page_content %}
+<div class="db-onboard-container">
+    <header class="db-onboard-header">
+        <h1>🚀 {{ _("Welcome to DataBridge") }}</h1>
+        <p>{{ _("Follow these steps to set up your data integration") }}</p>
+        <p>{{ _("اتبع هذه الخطوات لإعداد تكامل البيانات") }}</p>
+    </header>
+
+    <div class="db-onboard-steps">
+        <div class="db-onboard-step">
+            <div class="db-step-number">1</div>
+            <div class="db-step-content">
+                <h3>{{ _("Configure Data Source") }}</h3>
+                <p>{{ _("Set up your source connection: database credentials, API endpoints, or file locations.") }}</p>
+                <a href="/app/db-data-source" class="db-step-link">→ {{ _("Go to Data Sources") }}</a>
+            </div>
+        </div>
+
+        <div class="db-onboard-step">
+            <div class="db-step-number">2</div>
+            <div class="db-step-content">
+                <h3>{{ _("Create Field Mappings") }}</h3>
+                <p>{{ _("Map source fields to target DocType fields. Add transformations for data conversion.") }}</p>
+                <a href="/app/db-mapping" class="db-step-link">→ {{ _("Go to Mappings") }}</a>
+            </div>
+        </div>
+
+        <div class="db-onboard-step">
+            <div class="db-step-number">3</div>
+            <div class="db-step-content">
+                <h3>{{ _("Set Validation Rules") }}</h3>
+                <p>{{ _("Define validation rules to ensure data quality before import.") }}</p>
+                <a href="/app/db-validation-rule" class="db-step-link">→ {{ _("Go to Validation") }}</a>
+            </div>
+        </div>
+
+        <div class="db-onboard-step">
+            <div class="db-step-number">4</div>
+            <div class="db-step-content">
+                <h3>{{ _("Run Test Import") }}</h3>
+                <p>{{ _("Execute a dry run to preview results without committing changes.") }}</p>
+                <a href="/app/db-import-job" class="db-step-link">→ {{ _("Go to Import Jobs") }}</a>
+            </div>
+        </div>
+
+        <div class="db-onboard-step">
+            <div class="db-step-number">5</div>
+            <div class="db-step-content">
+                <h3>{{ _("Schedule Sync") }}</h3>
+                <p>{{ _("Set up automated synchronization for recurring data updates.") }}</p>
+                <a href="/app/db-sync-schedule" class="db-step-link">→ {{ _("Go to Schedules") }}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="db-tips">
+        <h3>💡 {{ _("Quick Tips") }}</h3>
+        <ul>
+            <li>{{ _("Always run a dry run before full import to catch errors") }}</li>
+            <li>{{ _("Use unique identifier fields for update/upsert operations") }}</li>
+            <li>{{ _("Enable logging for troubleshooting failed records") }}</li>
+            <li>{{ _("Schedule imports during off-peak hours for large datasets") }}</li>
+            <li>{{ _("Create backup before major migrations") }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
